@@ -48,3 +48,32 @@ sub sign_request {
 
 1;
 
+
+=head1 NAME
+
+Net::Google::AuthSub::Once - Make one secure authenticated request to a Google service
+
+=head1 SYNOPSYS
+
+    my $auth = Net::Google::AuthSub::Once->new();
+    redirect_to($auth->get_authorization_url('http://example.com/your-next-url'));
+
+    # Then after the response comes back
+    
+    # Make a request to the Google service
+    my $auth = Net::Google::AuthSub::Once->new({ private_key_filename => 'filename' });
+    my $request = HTTP::Request->new(GET => 'http://www.google.com/...');
+    $auth->sign_request($request);
+    my $resp = $ua->request($request);
+
+=head1 DESCRIPTION
+
+You must add your domain on Google for using secure requests. This module only
+supports secure requests.  L<https://www.google.com/accounts/ManageDomains>
+
+Google has some information about create the private key file you need.
+
+L<http://code.google.com/apis/gdata/docs/auth/authsub.html#Registered>
+
+=cut
+
