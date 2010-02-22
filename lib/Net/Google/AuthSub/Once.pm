@@ -68,6 +68,10 @@ Net::Google::AuthSub::Once - Make one secure authenticated request to a Google s
 
 =head1 DESCRIPTION
 
+The nice thing about this module is that you don't need to know the Google
+login details of the user of your applications. You can make a secure request
+to a Google service in their place.
+
 You must add your domain on Google for using secure requests. This module only
 supports secure requests.  L<https://www.google.com/accounts/ManageDomains>
 
