@@ -75,5 +75,37 @@ Google has some information about create the private key file you need.
 
 L<http://code.google.com/apis/gdata/docs/auth/authsub.html#Registered>
 
+=head1 METHODS
+
+=head2 CLASS->new($options)
+
+=over 4
+
+=item * private_key_filename
+
+The filename of a private key file.
+
+=back
+
+
+=head2 $self->get_authorization_url($next_url)
+
+Returns the authorization url that you need to redirect to. Next_url is the url that
+google will redirect you to after the request was authorized.
+
+=head2 $self->sign_request($request, $url, $token)
+
+Signs the HTTP::Request.
+
+=head1 AUTHOR
+
+Peter Stuifzand E<lt>peter@stuifzand.euE<gt>
+
+=head1 COPYRIGHT
+
+Copyright, 2010 - Peter Stuifzand
+
+Released under the same terms as Perl itself
+
 =cut
 
