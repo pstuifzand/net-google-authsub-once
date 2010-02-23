@@ -3,3 +3,6 @@ README
 lib/Net/Google/AuthSub/Once.pm
 MANIFEST
 MANIFEST.SKIP
+META.yml
+Changes
+t/use.t
